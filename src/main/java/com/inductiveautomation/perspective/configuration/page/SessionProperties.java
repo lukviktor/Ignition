@@ -32,13 +32,4 @@ public class SessionProperties {
                 "Представляет IP-адрес сеанса, каким его видит шлюз."
         ));
     }
-
-
-
-    public static void main(String[] args) {
-        SessionProperties sp = new SessionProperties();
-        System.out.println(sp.name());
-        System.out.println(sp.description());
-        System.out.println(sp.name().get(4));
-    }
 }

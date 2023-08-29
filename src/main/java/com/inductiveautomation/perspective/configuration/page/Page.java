@@ -3,11 +3,9 @@ package com.inductiveautomation.perspective.configuration.page;
 import javax.swing.*;
 
 public class Page {
-    public static void main(String[] args) {
-        Page page = new Page();
-        page.page();
-    }
-
+    /**
+     * Page Configurator
+     */
     private String add() {
         return "Add (Добавить) —  создает новую конфигурацию страницы.";
     }
@@ -19,9 +17,9 @@ public class Page {
     public void page() {
 
 
-        String[] sports = {"add", "trash"};
+        String[] config = {"add", "trash"};
         String res = (String) JOptionPane.showInputDialog(null, "select an action in Page Configurator", "Page Configurator",
-                JOptionPane.PLAIN_MESSAGE, null, sports, sports[0]);
+                JOptionPane.PLAIN_MESSAGE, null, config, config[0]);
         switch (res) {
             case "add":
                 System.out.println(add());
@@ -33,5 +31,10 @@ public class Page {
                 JOptionPane.showMessageDialog(null, trash());
                 break;
         }
+    }
+
+    public static void main(String[] args) {
+        Page page = new Page();
+        page.page();
     }
 }
