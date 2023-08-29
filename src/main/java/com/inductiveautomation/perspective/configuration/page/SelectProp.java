@@ -1,8 +1,13 @@
 package com.inductiveautomation.perspective.configuration.page;
 
 import javax.swing.*;
+import java.awt.*;
+
 
 public class SelectProp {
+    /**
+     * Function selection window in Session Properties
+     */
     public void showProp() {
         SessionProperties prop = new SessionProperties();
         String[] value = prop.name().toArray(new String[0]);
@@ -11,7 +16,7 @@ public class SelectProp {
 
         int index = prop.name().indexOf(res);
         System.out.println(prop.name().get(index) + ": " + prop.description().get(index));
-
+        JOptionPane.showMessageDialog(null, prop.name().get(index) + ": " + prop.description().get(index));
     }
 
     public static void main(String[] args) {
