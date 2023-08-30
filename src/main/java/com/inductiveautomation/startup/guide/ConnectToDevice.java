@@ -32,6 +32,15 @@ public class ConnectToDevice {
         String imageMoreEditProgram = "src/main/resources/Connect/MoreEditProgram.png";
         pane.output(imageMoreEditProgram);
 
+        String loadSimulatorProgram = "В раскрывающемся списке «Загрузить программу» и нажмите \"Load Simulator Program\"";
+        pane.outputMessage(loadSimulatorProgram);
+        String imageLoadSimulatorProgram = "src/main/resources/Connect/LoadSimulatorProgram.png";
+        pane.output(imageLoadSimulatorProgram);
+
+        String clickSaveProgram = "Нажмите  кнопку «Save Program»  внизу страницы";
+        pane.outputMessage(clickSaveProgram);
+        String imageClickSaveProgram = "src/main/resources/Connect/ClickSaveProgram.png";
+        pane.output(imageClickSaveProgram);
     }
 
 
