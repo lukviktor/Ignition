@@ -1,6 +1,9 @@
 package com.inductiveautomation.startup.guide;
 
 import com.inductiveautomation.perspective.configuration.joptionpane.InputOutputPane;
+import com.inductiveautomation.perspective.configuration.joptionpane.SharedMethod;
+
+import java.util.stream.IntStream;
 
 public class ConnectToDevice {
     /**
@@ -8,43 +11,28 @@ public class ConnectToDevice {
      */
     public void connectDevice() {
         InputOutputPane pane = new InputOutputPane();
-        
-        String pageConfig = "src/main/resources/Connect/pageConfig.png";
-        pane.output(pageConfig);
-        String deviceConnections = "Прокрутите вниз до  раздела OPC  UA  слева до  пункта «Подключения устройств».";
-        pane.outputMessage(deviceConnections);
+        String[] message = {
+                "Прокрутите вниз \"OPC UA\" -> \"Device Connections\" -> \"Create new Device.\".",
+                "Выберите из списка и нажмите \"Next\".",
+                "Создайте \"name\" и нажмите \"Create New Device\".",
+                "Выберете - \"More\" > \"edit program\".",
+                "Выберете из списка и нажмите \"Load Simulator Program\"",
+                "Вы увидите ряд инструкций. Нажмите кнопку \"Save Program\"",
+        };
+        String[] image = {
+                "src/main/resources/Connect/ConnectToDevice/pageConfig.png",
+                "src/main/resources/Connect/ConnectToDevice/ProgrammableDeviceSimulator.png",
+                "src/main/resources/Connect/ConnectToDevice/nameCreateNewDevice.png",
+                "src/main/resources/Connect/ConnectToDevice/MoreEditProgram.png",
+                "src/main/resources/Connect/ConnectToDevice/LoadSimulatorProgram.png",
+                "src/main/resources/Connect/ConnectToDevice/ClickSaveProgram.png"
+        };
 
-        String createNewDevice = "src/main/resources/Connect/CreateNewDevice.png";
-        pane.output(createNewDevice);
-        String programmableDeviceSimulator = "Выберите симулятор программируемого устройства и нажмите «Далее».";
-        pane.outputMessage(programmableDeviceSimulator);
-
-        String imageProgrammableDeviceSimulator = "src/main/resources/Connect/ProgrammableDeviceSimulator.png";
-        pane.output(imageProgrammableDeviceSimulator);
-
-        String nameCreateNewDevice = "Дайте новому соединению имя и нажмите «Создать новое устройство».";
-        pane.outputMessage(nameCreateNewDevice);
-        String messageNameCreateNewDevice = "src/main/resources/Connect/nameCreateNewDevice.png";
-        pane.output(messageNameCreateNewDevice);
-
-        String moreEditProgram = "Выберете - More > edit program.";
-        pane.outputMessage(moreEditProgram);
-        String imageMoreEditProgram = "src/main/resources/Connect/MoreEditProgram.png";
-        pane.output(imageMoreEditProgram);
-
-        String loadSimulatorProgram = "В раскрывающемся списке «Загрузить программу» и нажмите \"Load Simulator Program\"";
-        pane.outputMessage(loadSimulatorProgram);
-        String imageLoadSimulatorProgram = "src/main/resources/Connect/LoadSimulatorProgram.png";
-        pane.output(imageLoadSimulatorProgram);
-
-        String clickSaveProgram = "Нажмите  кнопку «Save Program»  внизу страницы";
-        pane.outputMessage(clickSaveProgram);
-        String imageClickSaveProgram = "src/main/resources/Connect/ClickSaveProgram.png";
-        pane.output(imageClickSaveProgram);
+        new SharedMethod().show(message, image);
     }
-
 
     public static void main(String[] args) {
         new ConnectToDevice().connectDevice();
     }
 }
+

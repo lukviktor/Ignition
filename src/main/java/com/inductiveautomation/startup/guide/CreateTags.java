@@ -1,30 +1,28 @@
 package com.inductiveautomation.startup.guide;
 
 import com.inductiveautomation.perspective.configuration.joptionpane.InputOutputPane;
+import com.inductiveautomation.perspective.configuration.joptionpane.SharedMethod;
+
+import java.util.stream.IntStream;
 
 public class CreateTags {
     /**
      * Создание Tegs
      */
     public void createTags() {
-        String[] messageCreateTags = {
+        String[] message = {
                 "Tab Browser, нажмите кнопку \"Add\" ",
                 "Выделите нужные Теги и нажмите \"стрелку вправо\"",
                 "Перейдите на вкладку  «Tegs» и откройте папку"
         };
 
-        String[] imageCreateTags = {
+        String[] image = {
                 "src/main/resources/Connect/CreateTags/clickAddIcon.png",
                 "src/main/resources/Connect/CreateTags/SelecktAndAddTeg.png",
                 "src/main/resources/Connect/CreateTags/tegsFolder.png"
         };
 
-        InputOutputPane pane = new InputOutputPane();
-        for (int i = 0; i<messageCreateTags.length;i++) {
-
-            pane.outputMessage(messageCreateTags[i]);
-            pane.output(imageCreateTags[i]);
-        }
+        new SharedMethod().show(message, image);
     }
 
     public static void main(String[] args) {
