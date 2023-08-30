@@ -1,12 +1,12 @@
 package com.inductiveautomation.perspective.create.docked_views;
 
-import javax.swing.*;
+import com.inductiveautomation.perspective.configuration.joptionpane.InputOutputPane;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class PropertiesDockerViews {
-    // View, Display, Resizable?, Modal?, Content, Anchor, Size, Auto Breakpoint, Dock ID, Handle, Handle Icon, View Parameters, Remove
     public List<String> nameProperty() {
         return new ArrayList<>(Arrays.asList(
                 "Anchor", "Auto Breakpoint", "Content", "Display",
@@ -33,18 +33,16 @@ public class PropertiesDockerViews {
         ));
     }
 
-    public void viewerProperty() {
-        String[] value = nameProperty().toArray(new String[0]);
-        String res = (String) JOptionPane.showInputDialog(null, "Настройки Docker Views", "Properties",
-                JOptionPane.PLAIN_MESSAGE, null, value, value[0]);
+    public void view() {
+        String message = "Настройки Docker Views";
+        String title = "Properties";
 
-        int index = nameProperty().indexOf(res);
-        System.out.println(nameProperty().get(index) + ": " + description().get(index));
-        JOptionPane.showMessageDialog(null, nameProperty().get(index) + ": " + description().get(index));
+        new InputOutputPane().inputArray(nameProperty(), description(),
+                message, title);
     }
 
     public static void main(String[] args) {
-        PropertiesDockerViews dockerViews = new PropertiesDockerViews();
-        dockerViews.viewerProperty();
-    }
+
+        new PropertiesDockerViews().view();
+     }
 }

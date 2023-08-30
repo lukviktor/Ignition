@@ -1,31 +1,28 @@
 package com.inductiveautomation.perspective.create.docked_views;
 
-import javax.swing.*;
+import com.inductiveautomation.perspective.configuration.joptionpane.InputOutputPane;
 
 public class DockedViews {
     public void dockedViews() {
-        String[] config = {"Настройка", "Редактирование"};
-        String res = (String) JOptionPane.showInputDialog(null, "Работа с DockedViews",
-                "Page Configurator",
-                JOptionPane.PLAIN_MESSAGE,
-                null, config, config[0]);
-        switch (res) {
+        String[] value = {"Настройка", "Редактирование"};
+        String message = "Работа с DockedViews";
+        String title = "Page Configurator";
+        switch (new InputOutputPane().inputArray(value, message,
+                title)) {
             case "Настройка":
-                JOptionPane.showMessageDialog(null,
-                        new ImageIcon("src/main/resources/DockedView/ConfiguringDockedView.png"));
+                String configuringDockedView = "src/main/resources/DockedView/ConfiguringDockedView.png";
+                new InputOutputPane().output(configuringDockedView);
                 break;
 
             case "Редактирование":
-                JOptionPane.showMessageDialog(null,
-                        new ImageIcon("src/main/resources/DockedView/EditingExistingDockedView.png"));
-                PropertiesDockerViews dockerViews = new PropertiesDockerViews();
-                dockerViews.viewerProperty();
+                String editingExistingDockedView = "src/main/resources/DockedView/EditingExistingDockedView.png";
+                new InputOutputPane().output(editingExistingDockedView);
+                new PropertiesDockerViews().view();
                 break;
         }
     }
 
     public static void main(String[] args) {
-        DockedViews dockedViews = new DockedViews();
-        dockedViews.dockedViews();
+        new DockedViews().dockedViews();
     }
 }
