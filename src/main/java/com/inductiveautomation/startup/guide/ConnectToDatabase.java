@@ -7,7 +7,7 @@ public class ConnectToDatabase {
      * Подключение к базе данных
      */
     public void connectDB() {
-        String[] MassegeConnectDB = {
+        String[] MessageConnectDB = {
                 "Config -> Databases -> Select SQL -> Next.",
                 "Введите Name и Connect URL и нажмите Create New Database Connection.",
                 "Ждите появится сообщение об успешном завершении."
@@ -18,10 +18,10 @@ public class ConnectToDatabase {
                 "src/main/resources/Connect/ConnectToDatabase/databaseConnectionCreated.png"
         };
         InputOutputPane pane = new InputOutputPane();
-        for (int i = 0; i<MassegeConnectDB.length;i++) {
+        for (int i = 0; i<MessageConnectDB.length;i++) {
             //System.out.println(connectDB[i]);
 
-            pane.outputMessage(MassegeConnectDB[i]);
+            pane.outputMessage(MessageConnectDB[i]);
             pane.output(imageConnectDB[i]);
         }
     }
