@@ -18,7 +18,6 @@ public class CreateTags {
 
         InputOutputPane pane = new InputOutputPane();
         for (int i = 0; i<messageCreateTags.length;i++) {
-            //System.out.println(connectDB[i]);
 
             pane.outputMessage(messageCreateTags[i]);
             pane.output(imageCreateTags[i]);
