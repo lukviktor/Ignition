@@ -6,7 +6,7 @@ public class ConnectToDevice {
     /**
      * Подключитесь к устройству
      */
-    public void connect() {
+    public void connectDevice() {
         InputOutputPane pane = new InputOutputPane();
         
         String pageConfig = "src/main/resources/Connect/pageConfig.png";
@@ -45,6 +45,6 @@ public class ConnectToDevice {
 
 
     public static void main(String[] args) {
-        new ConnectToDevice().connect();
+        new ConnectToDevice().connectDevice();
     }
 }
