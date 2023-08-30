@@ -19,7 +19,6 @@ public class ConnectToDatabase {
         };
         InputOutputPane pane = new InputOutputPane();
         for (int i = 0; i<MessageConnectDB.length;i++) {
-            //System.out.println(connectDB[i]);
 
             pane.outputMessage(MessageConnectDB[i]);
             pane.output(imageConnectDB[i]);

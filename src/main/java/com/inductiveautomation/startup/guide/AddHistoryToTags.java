@@ -3,6 +3,10 @@ package com.inductiveautomation.startup.guide;
 import com.inductiveautomation.perspective.configuration.joptionpane.InputOutputPane;
 
 public class AddHistoryToTags {
+
+    /**
+     * Добавить историю к тегам
+     */
     public void addHistoryToTags() {
         String[] messageAddHistoryToTags = {
                 "Выделите tegs и нажмите \"Edit tag(s)\"",

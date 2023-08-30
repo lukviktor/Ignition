@@ -3,6 +3,9 @@ package com.inductiveautomation.startup.guide;
 import com.inductiveautomation.perspective.configuration.joptionpane.InputOutputPane;
 
 public class CreateTags {
+    /**
+     * Создание Tegs
+     */
     public void createTags() {
         String[] messageCreateTags = {
                 "Tab Browser, нажмите кнопку \"Add\" ",
