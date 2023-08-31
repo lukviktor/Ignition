@@ -1,4 +1,4 @@
-package com.inductiveautomation.startup.guide;
+package com.inductiveautomation.Welcome.startup.guide;
 
 import com.inductiveautomation.joptionpane.InputOutputPane;
 import com.inductiveautomation.joptionpane.SharedMethod;

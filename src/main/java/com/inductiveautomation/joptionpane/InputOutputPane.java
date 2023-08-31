@@ -33,6 +33,17 @@ public class InputOutputPane {
                 inputArrayList.get(index) + ": " + outputArrayList.get(index));
     }
 
+    public String inputArray(List<String> inputArrayList) {
+        String[] value = arrayConversion(inputArrayList);
+
+        JOptionPane optionPane = new JOptionPane();
+        Dimension dimension = new Dimension(800, 600);  // Задаем размеры окна
+        optionPane.setPreferredSize(dimension);
+
+        return (String) JOptionPane.showInputDialog(null,
+                null, null, JOptionPane.PLAIN_MESSAGE, null, value, value[0]);
+    }
+
     public String inputArray(String[] value, String message, String title) {
         JOptionPane optionPane = new JOptionPane();
         Dimension dimension = new Dimension(800, 600);  // Задаем размеры окна
