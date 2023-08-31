@@ -1,6 +1,6 @@
 package com.inductiveautomation.perspective.create.docked_views;
 
-import com.inductiveautomation.perspective.configuration.joptionpane.InputOutputPane;
+import com.inductiveautomation.joptionpane.InputOutputPane;
 
 import java.util.ArrayList;
 import java.util.Arrays;

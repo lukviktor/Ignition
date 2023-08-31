@@ -1,4 +1,4 @@
-package com.inductiveautomation.perspective.configuration.joptionpane;
+package com.inductiveautomation.joptionpane;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

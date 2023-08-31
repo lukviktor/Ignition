@@ -1,6 +1,6 @@
 package com.inductiveautomation.startup.guide;
 
-import com.inductiveautomation.perspective.configuration.joptionpane.SharedMethod;
+import com.inductiveautomation.joptionpane.SharedMethod;
 
 public class CreateProject {
     public void createProject() {

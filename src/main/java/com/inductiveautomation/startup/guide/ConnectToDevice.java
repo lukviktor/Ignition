@@ -1,9 +1,7 @@
 package com.inductiveautomation.startup.guide;
 
-import com.inductiveautomation.perspective.configuration.joptionpane.InputOutputPane;
-import com.inductiveautomation.perspective.configuration.joptionpane.SharedMethod;
-
-import java.util.stream.IntStream;
+import com.inductiveautomation.joptionpane.InputOutputPane;
+import com.inductiveautomation.joptionpane.SharedMethod;
 
 public class ConnectToDevice {
     /**

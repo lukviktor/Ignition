@@ -1,40 +1,29 @@
 package com.inductiveautomation.perspective.configuration.page;
 
-import javax.swing.*;
+import com.inductiveautomation.joptionpane.InputOutputPane;
 
 public class Page {
     /**
      * Page Configurator
      */
-    private String add() {
-        return "Add (Добавить) —  создает новую конфигурацию страницы.";
-    }
+    private void pageInstall() {
+        String[] name = {
+                "add",
+                "trash"
+        };
+        String[] description = {
+                " (Добавить) —  создает новую конфигурацию страницы.",
+                " (Корзина ) —  удаляет выбранную конфигурацию страницы."
+        };
 
-    private String trash() {
-        return "Trash (Корзина ) —  удаляет выбранную конфигурацию страницы.";
+        new InputOutputPane().output(name, description, "Page Configurator", null);
     }
 
     public void page() {
-
-
-        String[] config = {"add", "trash"};
-        String res = (String) JOptionPane.showInputDialog(null, "select an action in Page Configurator", "Page Configurator",
-                JOptionPane.PLAIN_MESSAGE, null, config, config[0]);
-        switch (res) {
-            case "add":
-                System.out.println(add());
-                JOptionPane.showMessageDialog(null, add());
-                break;
-
-            case "trash":
-                System.out.println(trash());
-                JOptionPane.showMessageDialog(null, trash());
-                break;
-        }
+        pageInstall();
     }
 
     public static void main(String[] args) {
-        Page page = new Page();
-        page.page();
+        new Page().page();
     }
 }
